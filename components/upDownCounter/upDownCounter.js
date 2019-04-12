@@ -6,11 +6,11 @@ function upDownCounter(){
     controller.displayNumber = 0;
 
     controller.up = ()=>{
-        controller.displayNumber++;
+        controller.displayNumber+=10;
     }
 
     controller.down = ()=>{
-        controller.displayNumber--;
+        controller.displayNumber-=10;
     }
 }
 
@@ -19,6 +19,7 @@ angular.module('MyApp').component('upDownCounter', {
     <div class="counter-box">
         <button class="button" ng-click="$ctrl.up()">Up</button>
         <div class="number">{{$ctrl.displayNumber}}</div>
+        <input type="text" class="expanding-input" expand-On-Focus display-number="$ctrl.displayNumber"></input>
         <button class="button" ng-click="$ctrl.down()">Down</button>
     </div>
         `,
